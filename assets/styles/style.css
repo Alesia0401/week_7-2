@@ -87,7 +87,7 @@ nav {
 }
 
 h1,
-.button {
+.button-button {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #ffffff;
@@ -110,22 +110,38 @@ h2 {
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  gap: 8px;
-  width: 273px;
-  height: 72px;
   background: #7b61ff;
   border-radius: 12px;
   border: none;
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 0 auto 184px auto;
 }
 
-.button:active {
+.button-button {
+  position: relative;
+  display: block;
+  justify-content: center;
+  margin: 0 auto 184px auto;
+  padding: 24px 0 24px 30px;
+  width: 273px;
+  height: 72px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.button-button::before {
+  content: url("/assets/images/earth.svg");
+  position: absolute;
+  left: 11%;
+  top: 35%;
+}
+
+.button-button:hover {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.button-button:active,
+.button-find:active {
   background: #2b2bb9;
 }
 
@@ -150,19 +166,13 @@ h2 {
   margin: 0 auto;
 }
 
-.find {
+.button-find {
   padding: 18px;
   gap: 8px;
   width: 60px;
   height: 60px;
-  background: #7b61ff;
-  border-radius: 12px;
-  border: none;
 }
 
-.find:active {
-  background: #2b2bb9;
-}
 
 .icon {
   display: grid;
@@ -227,15 +237,13 @@ input {
   gap: 4px;
 }
 
-.but1 {
+.but {
   display: grid;
   grid-template-columns: 1fr 20px;
   justify-content: center;
   align-items: center;
   padding: 10px;
   gap: 4px;
-  width: 105px;
-  height: 44px;
   background: #f6f4ff;
   border-radius: 12px;
   border: none;
@@ -244,10 +252,15 @@ input {
   font-size: 16px;
   line-height: 24px;
   color: #5243c2;
-  margin: 120px 0 64px 0;
 }
 
-.but1:active {
+.but-but1 {
+  margin: 120px 0 64px 0;
+  width: 105px;
+  height: 44px;
+}
+
+.but-but1:active {
   background: #8f8f94;
 }
 
@@ -336,26 +349,12 @@ h3 {
   color: #5b5b5b;
 }
 
-.but2 {
-  display: grid;
-  grid-template-columns: 1fr 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 4px;
+.but-but2 {
   width: 133px;
   height: 44px;
-  background: #f6f4ff;
-  border-radius: 12px;
-  border: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #5243c2;
 }
 
-.but2:active {
+.but-but2:active {
   background: #8f8f94;
 }
 
@@ -452,17 +451,14 @@ h4 {
   color: #161414;
 }
 
-.arrow {
+.button-arrow {
   padding: 24px;
   gap: 8px;
   width: 72px;
   height: 72px;
-  background: #7b61ff;
-  border-radius: 12px;
-  border: none;
 }
 
-.arrow:active {
+.button-arrow:active {
   background: #2b2bb9;
 }
 
@@ -614,7 +610,7 @@ h4 {
   .icon1 {
     font-size: 15px;
   }
-  .but-find{
+  .but-find {
     display: grid;
     grid-area: 3/1/4/3;
     justify-content: center;
