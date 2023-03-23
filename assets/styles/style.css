@@ -128,7 +128,7 @@ h2 {
 }
 
 .button-button::before {
-  content: url("/assets/images/earth.svg");
+  content: url("../images/earth.svg");
   position: absolute;
   left: 11%;
   top: 35%;
@@ -140,8 +140,7 @@ h2 {
   box-shadow: inset 0 0 0 3px white;
 }
 
-.button-button:active,
-.button-find:active {
+.button-button:active {
   background: #2b2bb9;
 }
 
@@ -173,6 +172,13 @@ h2 {
   height: 60px;
 }
 
+.button-find:hover {
+  background-color: #534d4d;
+}
+
+.button-find:active {
+  background: #2b2bb9;
+}
 
 .icon {
   display: grid;
@@ -255,9 +261,23 @@ input {
 }
 
 .but-but1 {
+  position: relative;
   margin: 120px 0 64px 0;
   width: 105px;
   height: 44px;
+}
+
+.but-but1::after {
+  content: url("../images/arrow-right-line.svg");
+  position: absolute;
+  left: 70%;
+  top: 28%;
+}
+
+.but-but1:hover {
+  background: rgba(0, 0, 0, 0);
+  color: rgb(12, 12, 12);
+  box-shadow: inset 0 0 0 3px rgb(20, 20, 20);
 }
 
 .but-but1:active {
@@ -350,8 +370,22 @@ h3 {
 }
 
 .but-but2 {
+  position: relative;
   width: 133px;
   height: 44px;
+}
+
+.but-but2::after {
+  content: url("../images/arrow-right-line.svg");
+  position: absolute;
+  left: 80%;
+  top: 28%;
+}
+
+.but-but2:hover {
+  background: rgba(0, 0, 0, 0);
+  color: rgb(12, 12, 12);
+  box-shadow: inset 0 0 0 3px rgb(20, 20, 20);
 }
 
 .but-but2:active {
@@ -456,6 +490,10 @@ h4 {
   gap: 8px;
   width: 72px;
   height: 72px;
+}
+
+.button-arrow:hover {
+  background-color: #534d4d;
 }
 
 .button-arrow:active {
